@@ -1,2 +1,26 @@
-<p>Oi
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <article>
+        <h3><%= @restaurant.name %></h3>
+        <h4><%= @restaurant.address %></h4>
+        <h6><%= @restaurant.category %></h6>
+      </article>
+    </div>
+  </div>
+    <%= render 'reviews_form' %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <article>
+        <% @reviews.each do |review| %>
+          <h4>
+            <%= review.content %>
+          </h4>
+          <h6>
+            <%= review.rating %>
+          </h6>
+        <% end %>
+      </article>
+    </div>
+  </div>
+</div>

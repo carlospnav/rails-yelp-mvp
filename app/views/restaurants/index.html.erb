@@ -1,2 +1,13 @@
-<p> o
-</p>
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>
+      <div class="col-xs-12 col-sm-2 col-md-4 col-offset-4 text-center">
+        <article>
+          <h3><%= restaurant.name %></h3>
+          <h4><%= restaurant.address %></h4>
+          <h6><%= restaurant.category %></h6>
+        </article>
+      </div>
+    <% end %>
+  </div>
+</div>
